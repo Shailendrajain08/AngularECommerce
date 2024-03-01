@@ -1,0 +1,6 @@
+.navbar{
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+}
