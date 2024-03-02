@@ -1,6 +1,6 @@
 <div class="signupForm">
   <div class="offset-lg-2 col-lg-8 my-1">
-    <form action="" class="container" onsubmit="onSubmitSignup()" [formGroup]="signUpForm">
+    <form action="" class="container" [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUp()">
       <div class="card ">
         <div class="card-header bs-success" style="background-color: #e3f2fd;">
           <h1>Registration Form</h1>
@@ -56,11 +56,15 @@
                 <input type="text" class="form-control" placeholder="Ex.. 470552" formControlName="zip">
               </div>
               <div class="form-group">
-                <label for="language">Language</label>
+                <label for="language">Language <i style="font-size:12px; color: gray;">You can select multiple languages</i></label>
                 <select multiple class="form-control" formControlName="language">
                   <option selected>Select your Language</option>
                   <option value="hindi">Hindi</option>
                   <option value="english">English</option>
+                  <option value="gujarati">Gujarati</option>
+                  <option value="marathi">Marathi</option>
+                  <option value="telugu">Telugu</option>
+                  <option value="kannada">Kannada</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -89,7 +93,8 @@
               </div>
               <div class="form-group">
                 <label for="role">What role do you want?</label>
-                <select class="form-control" formControlName="language">
+                <select class="form-control" formControlName="role">
+                  <option selected>Select Your Role</option>
                   <option value="seller">Seller</option>
                   <option value="buyer">Buyer</option>
                 </select>

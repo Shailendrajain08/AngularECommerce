@@ -21,7 +21,7 @@ export class SigninSingupComponent {
   regForm: boolean = false;
   signUpForm!: FormGroup;
   signInForm!: FormGroup;
-  signUpSubmitted = false;
+  signUpSubmitted:boolean = false;
   href: string = '';
   user_data: any;
   user_dto!: User;
@@ -30,7 +30,7 @@ export class SigninSingupComponent {
 
   constructor(private formBuilder: FormBuilder, private router: Router, private loginService: LoginSignupService) { }
 
-  ngOnInIt(): void {
+  ngOnInit():void{
     this.href = this.router.url;
     if (this.href == "/sign-up") {
       this.regForm = true;
@@ -45,8 +45,8 @@ export class SigninSingupComponent {
       dob: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
-      addLine1: ['', Validators.required],
-      addLine2: ['', Validators.required],
+      addressLine1: ['', Validators.required],
+      addressLine2: [],
       city: ['', Validators.required],
       state: ['', Validators.required],
       zip: ['', Validators.required],
@@ -56,14 +56,14 @@ export class SigninSingupComponent {
       uploadPhoto: ['', Validators.required],
       agreetc: ['', Validators.required],
       role: ['', Validators.required],
-    })
+    });
   }
 
   get rf() {
     return this.signUpForm.controls;
   }
 
-  onSubmitSignup(){
+  onSubmitSignUp(){
     this.signUpSubmitted = true;
     if(this.signUpForm.invalid){
       return;
@@ -78,8 +78,8 @@ export class SigninSingupComponent {
         gender: this.user_reg_data.gender,
         address: {
           id: 0,
-          addressLine1: this.user_reg_data.addLine1,
-          addressLine2: this.user_reg_data.addLine2,
+          addressLine1: this.user_reg_data.addressLine1,
+          addressLine2: this.user_reg_data.addressLine2,
           city: this.user_reg_data.city,
           state: this.user_reg_data.state,
           zip: this.user_reg_data.zip
@@ -91,6 +91,8 @@ export class SigninSingupComponent {
         uploadPhoto: this.user_reg_data.uploadPhoto,
         role: this.user_reg_data.role
       }
+
+      console.log(this.user_dto)
       this.loginService.userRegister(this.user_dto).subscribe(data => {
         alert("User Registered Successfull");
         this.router.navigateByUrl('/sign-in');

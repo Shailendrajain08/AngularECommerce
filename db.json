@@ -23,7 +23,32 @@
       "uploadPhoto": "shailendra.png",
       "agreetc": true,
       "role": "admin",
-      "id": 1
+      "id": "0894"
+    },
+    {
+      "id": "7c19",
+      "aboutYou": "egege rk ytky awd lilih cvz hvm ytyd",
+      "age": 30,
+      "dob": "1994-12-28",
+      "email": "shailendra@gmail.com",
+      "gender": "male",
+      "address": {
+        "id": 0,
+        "addressLine1": "C-13, Vijay Nagar",
+        "addressLine2": null,
+        "city": "Damoh",
+        "state": "state",
+        "zip": "470661"
+      },
+      "language": [
+        "hindi",
+        "english"
+      ],
+      "mobNumber": "7869505416",
+      "name": "Shailendra Jain",
+      "password": "ABC@123",
+      "uploadPhoto": "C:\\fakepath\\Certificate.jpg",
+      "role": "seller"
     }
   ],
   "products": [
@@ -36,7 +61,7 @@
         "category": "Electronics",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB1-PRXApHMT0xviLSU78LqRvdjFemt5Bl1w&usqp=CAU",
         "stock": 50,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 2,
@@ -46,7 +71,7 @@
         "category": "Electronics",
         "image": "https://m.media-amazon.com/images/I/51ihPoessmL.jpg",
         "stock": 100,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 3,
@@ -56,7 +81,7 @@
         "category": "Fashion",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqlmDpwhDoeA5kbEoa23hw9haWdqkiG1gkg&usqp=CAU",
         "stock": 30,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 4,
@@ -66,7 +91,7 @@
         "category": "Fashion",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQYx5yZP_O2KLaUTpXPsLio8fU88UbBryJQ&usqp=CAU",
         "stock": 20,
-        "status":"draft"
+        "status": "draft"
       },
       {
         "id": 5,
@@ -76,7 +101,7 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1i8pCgporS0l3jp5_xTk20Rod_fQHsAsA&usqp=CAU",
         "stock": 750,
-        "status":"draft"
+        "status": "draft"
       },
       {
         "id": 6,
@@ -86,7 +111,7 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrnr9UecNfIBC-eKKGvh8AcNq7BmXkQGFqOw&usqp=CAU",
         "stock": 50,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 7,
@@ -96,7 +121,7 @@
         "category": "Electronics",
         "image": "https://www.mytrendyphone.eu/images/Universal-Fast-Qi-Wireless-Charging-Pad-Q25-Black-05112021-01-p.webp",
         "stock": 40,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 8,
@@ -106,7 +131,7 @@
         "category": "Electronics",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYtH6LkzhWLMeDE7V-i6FcSma3wtW37JKhQ&usqp=CAU",
         "stock": 25,
-        "status":"draft"
+        "status": "draft"
       },
       {
         "id": 9,
@@ -116,7 +141,7 @@
         "category": "Fashion",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPawfIAJ_PdJ-VlTaE8unb4Nb1cI1sXl5IQ&usqp=CAU",
         "stock": 35,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 10,
@@ -126,7 +151,7 @@
         "category": "Fashion",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTjepDwsYtTTuCBiTO5VLVvpqtAXeIGZo8XDCheVGemCHtJkBbl1_cDol_O-Gn1BeU3I&usqp=CAU",
         "stock": 15,
-        "status":"draft"
+        "status": "draft"
       },
       {
         "id": 11,
@@ -136,7 +161,7 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9bwgLOaMN4sA1VvpZSam7SwbrVLnPrDVbQ&usqp=CAU",
         "stock": 30,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 12,
@@ -146,7 +171,7 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6yxFPP8k8qqPUB86Sv5NQdl4JOIolPdoL3g&usqp=CAU",
         "stock": 20,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 13,
@@ -156,7 +181,7 @@
         "category": "Electronics",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOS9QeLklK2DUmYPiEDpGu1yMadwZ1dfKkfw&usqp=CAU",
         "stock": 50,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 14,
@@ -166,7 +191,7 @@
         "category": "Fashion",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHoqDEDdnE-VqcPtj-djJU5Nrou8ReKXP8w&usqp=CAU",
         "stock": 40,
-        "status":"draft"
+        "status": "draft"
       },
       {
         "id": 15,
@@ -176,7 +201,7 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf4wCPzrbF3fAZAnNRz-q0kri98kIm5r-u4Q&usqp=CAU",
         "stock": 20,
-        "status":"publish"
+        "status": "publish"
       },
       {
         "id": 16,
@@ -186,16 +211,16 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKAMlzOxo_C-LYCk1VWRG1bWKzyqlaj1aGgw&usqp=CAU",
         "stock": 30,
-        "status":"publish"
+        "status": "publish"
       }
     ]
   ],
-  "order":[
+  "order": [
     {
-      "id":1,
-      "userId":3,
-      "sellerId":2,
-      "product":{
+      "id": "1",
+      "userId": 3,
+      "sellerId": 2,
+      "product": {
         "id": 14,
         "name": "Men's Wallet",
         "description": "Slim and durable leather wallet with multiple card slots and a cash compartment.",
@@ -203,18 +228,18 @@
         "category": "Fashion",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHoqDEDdnE-VqcPtj-djJU5Nrou8ReKXP8w&usqp=CAU",
         "stock": 40,
-        "status":"draft"
+        "status": "draft"
       },
-      "deliveryAddress":{
-        "id":0,
+      "deliveryAddress": {
+        "id": 0,
         "addrLine1": "B-11, Vijay Nagar",
         "addrLine2": "Near Central School",
-        "city":"Damoh",
+        "city": "Damoh",
         "state": "Madhya Pradesh",
-          "zipCode": 470661
+        "zipCode": 470661
       },
-      "contact":"8974562130",
-      "dateTime":"18/02/2024"
+      "contact": "8974562130",
+      "dateTime": "18/02/2024"
     }
   ]
 }

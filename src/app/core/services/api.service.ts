@@ -8,8 +8,7 @@ import { Observable, catchError, throwError } from 'rxjs';
 export class ApiService {
   httpOptions = {
     headers: new HttpHeaders({
-      "Content-type" : "application/json",
-      "Access-Control-Allow-Origin" : "*"
+      "Content-Type" : "application/json"
     })
   }
   constructor(private http:HttpClient) { }
