@@ -30,7 +30,7 @@
       "aboutYou": "egege rk ytky awd lilih cvz hvm ytyd",
       "age": 30,
       "dob": "1994-12-28",
-      "email": "shailendra@gmail.com",
+      "email": "shailendra01@gmail.com",
       "gender": "male",
       "address": {
         "id": 0,
@@ -48,7 +48,7 @@
       "name": "Shailendra Jain",
       "password": "ABC@123",
       "uploadPhoto": "C:\\fakepath\\Certificate.jpg",
-      "role": "buyer"
+      "role": "seller"
     }
   ],
   "products": [
