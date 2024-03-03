@@ -1,5 +1,5 @@
 <div class="signupForm">
-  <div class="offset-lg-2 col-lg-8 my-1">
+  <div class="offset-lg-2 col-lg-8 my-1" *ngIf="regForm">
     <form action="" class="container" [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUp()">
       <div class="card ">
         <div class="card-header bs-success" style="background-color: #e3f2fd;">
@@ -116,8 +116,8 @@
     <p class="sim-pointer" routerLink="/sign-in">Already have an account, Click here to login</p>
   </div>
 
-  <div class="offset-lg-2 col-lg-8 my-1">
-    <form action="" class="container">
+  <div class="offset-lg-2 col-lg-8 my-1" *ngIf="!regForm">
+    <form class="container" name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
       <div class="card ">
         <div class="card-header bs-success" style="background-color: #e3f2fd;">
           <h1>Login Form</h1>
@@ -127,11 +127,11 @@
             <div class="form-group col-lg-12">
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" placeholder="Ex.. abc@email.com" formControlName="email">
+                <input type="email" class="form-control" placeholder="Ex.. abc@email.com" name="#userEmail" [(ngModel)]="signInFormValue.userEmail" #userEmail="ngModel" required email>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Ex.. Abcd123@" formControlName="password">
+                <input type="password" class="form-control" placeholder="Ex.. Abcd123@" name="userPassword" [(ngModel)]="signInFormValue.userPassword" #userPassword="ngModel" minlength="6" togglePassword required password>
               </div>
             </div>
           </div>

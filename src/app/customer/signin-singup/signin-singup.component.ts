@@ -1,6 +1,13 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  NgModel,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { User } from '../../core/Model/objectModel';
 import { LoginSignupService } from '../../shared/services/login-signup.service';
@@ -9,33 +16,71 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-signin-singup',
   standalone: true,
-  imports: [NgFor, RouterLink, CommonModule, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    NgFor,
+    RouterLink,
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   templateUrl: './signin-singup.component.html',
-  styleUrl: './signin-singup.component.css'
+  styleUrl: './signin-singup.component.css',
 })
 export class SigninSingupComponent {
   states = [
-    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
-  ]
+    'Andhra Pradesh',
+    'Arunachal Pradesh',
+    'Assam',
+    'Bihar',
+    'Chhattisgarh',
+    'Goa',
+    'Gujarat',
+    'Haryana',
+    'Himachal Pradesh',
+    'Jharkhand',
+    'Karnataka',
+    'Kerala',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Manipur',
+    'Meghalaya',
+    'Mizoram',
+    'Nagaland',
+    'Odisha',
+    'Punjab',
+    'Rajasthan',
+    'Sikkim',
+    'Tamil Nadu',
+    'Telangana',
+    'Tripura',
+    'Uttar Pradesh',
+    'Uttarakhand',
+    'West Bengal',
+  ];
 
   regForm: boolean = false;
   signUpForm!: FormGroup;
   signInForm!: FormGroup;
-  signUpSubmitted:boolean = false;
+  signUpSubmitted: boolean = false;
   href: string = '';
   user_data: any;
   user_dto!: User;
   user_reg_data: any;
   signInFormValue: any = {};
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private loginService: LoginSignupService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private loginService: LoginSignupService
+  ) {}
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.href = this.router.url;
-    if (this.href == "/sign-up") {
+    if (this.href == '/sign-up') {
       this.regForm = true;
     } else if (this.href == '/sign-in') {
-      this.regForm = false
+      this.regForm = false;
     }
 
     this.signUpForm = this.formBuilder.group({
@@ -63,14 +108,14 @@ export class SigninSingupComponent {
     return this.signUpForm.controls;
   }
 
-  onSubmitSignUp(){
+  onSubmitSignUp() {
     this.signUpSubmitted = true;
-    if(this.signUpForm.invalid){
+    if (this.signUpForm.invalid) {
       return;
-    }else{
+    } else {
       this.user_reg_data = this.signUpForm.value;
       this.user_dto = {
-        aboutYou:this.user_reg_data.aboutYou,
+        aboutYou: this.user_reg_data.aboutYou,
         age: this.user_reg_data.age,
         agreetc: this.user_reg_data.ageertc,
         dob: this.user_reg_data.dob,
@@ -82,22 +127,53 @@ export class SigninSingupComponent {
           addressLine2: this.user_reg_data.addressLine2,
           city: this.user_reg_data.city,
           state: this.user_reg_data.state,
-          zip: this.user_reg_data.zip
+          zip: this.user_reg_data.zip,
         },
         language: this.user_reg_data.language,
         mobNumber: this.user_reg_data.mobNumber,
         name: this.user_reg_data.name,
         password: this.user_reg_data.password,
         uploadPhoto: this.user_reg_data.uploadPhoto,
-        role: this.user_reg_data.role
-      }
+        role: this.user_reg_data.role,
+      };
 
-      console.log(this.user_dto)
-      this.loginService.userRegister(this.user_dto).subscribe(data => {
-        alert("User Registered Successfull");
+      console.log(this.user_dto);
+      this.loginService.userRegister(this.user_dto).subscribe((data) => {
+        alert('User Registered Successfull');
         this.router.navigateByUrl('/sign-in');
-      })
+      });
     }
   }
-}
 
+  onSubmitSignIn() {
+    this.loginService
+      .authLogin(
+        this.signInFormValue.userEmail,
+        this.signInFormValue.userPassword
+      )
+      .subscribe((data) => {
+        this.user_data = data;
+        console.log(this.user_data.length)
+        if (this.user_data.length == 1) {
+          if (this.user_data[0].role == 'seller') {
+            sessionStorage.setItem('user_session_id', this.user_data[0].id);
+            sessionStorage.setItem('role', this.user_data[0].role);
+            this.router.navigateByUrl('/seller-dashboard')
+          }else if(this.user_data[0].role == 'buyer'){
+            sessionStorage.setItem('user_session_id', this.user_data[0].id);
+            sessionStorage.setItem('role', this.user_data[0].role);
+            this.router.navigateByUrl('/buyer-dashboard')
+          }else{
+            alert("Invalid login details");
+          }
+        }
+        else{
+          alert("Invalid login details");
+        }
+        console.log(this.user_data)
+      },
+      error=>{
+        console.log("My Error", error)
+      });
+  }
+}
