@@ -1,1 +1,31 @@
-<p>admin-login works!</p>
+<div class="signupForm">
+  <div class="offset-lg-2 col-lg-8 my-1">
+    <form class="container" name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
+      <div class="card ">
+        <div class="card-header bs-success" style="background-color: #e3f2fd;">
+          <h1>Admin Login Form</h1>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="form-group col-lg-12">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" placeholder="Ex.. abc@email.com" name="#adminEmail" [(ngModel)]="signInFormValue.adminEmail" #adminEmail="ngModel" required email>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Ex.. Abcd123@" name="adminPassword" [(ngModel)]="signInFormValue.adminPassword" #adminPassword="ngModel" minlength="6" togglePassword required password>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer" style="background-color: #e3f2fd;">
+          <div class="form-group">
+            <button class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- <p class="sim-pointer" routerLink="/sign-up">Don't have an account, Click here to Register</p> -->
+  </div>
+</div>

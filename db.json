@@ -49,10 +49,34 @@
       "password": "ABC@123",
       "uploadPhoto": "C:\\fakepath\\Certificate.jpg",
       "role": "seller"
+    },
+    {
+      "id": "7c18",
+      "aboutYou": "egege rk ytky awd lilih cvz hvm ytyd",
+      "age": 30,
+      "dob": "1994-04-08",
+      "email": "shaan02@gmail.com",
+      "gender": "male",
+      "address": {
+        "id": 0,
+        "addressLine1": "C-8, Vijay Nagar",
+        "addressLine2": null,
+        "city": "Damoh",
+        "state": "state",
+        "zip": "470661"
+      },
+      "language": [
+        "hindi",
+        "english"
+      ],
+      "mobNumber": "7869580898",
+      "name": "Shaan Jain",
+      "password": "ABCD@123",
+      "uploadPhoto": "C:\\fakepath\\Certificate.jpg",
+      "role": "buyer"
     }
   ],
   "products": [
-    [
       {
         "id": 1,
         "name": "Wireless Bluetooth Headphones",
@@ -161,7 +185,7 @@
         "category": "Home & Kitchen",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9bwgLOaMN4sA1VvpZSam7SwbrVLnPrDVbQ&usqp=CAU",
         "stock": 30,
-        "status": "publish"
+        "status": "inactive"
       },
       {
         "id": 12,
@@ -213,7 +237,6 @@
         "stock": 30,
         "status": "publish"
       }
-    ]
   ],
   "order": [
     {
