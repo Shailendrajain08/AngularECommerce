@@ -72,7 +72,9 @@ export class UserCrudComponent implements OnInit {
   addUSer(){
     this.addEditUser = true;
     if(this.addEditUserForm.invalid){
-      alert('Error!! :-)\n\n' +JSON.stringify(this.addEditUserForm.value))
+      alert('Error!! :-)\n\n' +JSON.stringify(this.addEditUserForm.value));
+      return;
     }
+    this.userRegData = this.addEditUserForm.value;
   }
 }
