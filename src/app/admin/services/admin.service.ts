@@ -43,8 +43,8 @@ export class AdminService {
 
   // delete user
 
-  deleteUSer(user_id:any){
-    this.api.delete(this.user_url+user_id)
+  deleteUser(user_id:any):Observable<any>{
+   return this.api.delete(this.user_url+user_id)
   }
 
 }
