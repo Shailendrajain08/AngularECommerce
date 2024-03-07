@@ -1,28 +1,29 @@
 {
   "user": [
     {
-      "name": "Shailendra Jain",
-      "mobNumber": "9874563210",
+      "aboutYou": "I am a MEAN and MERN Stack developer",
       "age": 29,
-      "dob": "28/12/1994",
+      "agreetc": true,
+      "dob": "1994-12-28",
       "email": "shailendra@gmail.com",
-      "password": "123456",
+      "gender": "male",
       "address": {
+        "id": 0,
         "addressLine1": "C-13, Vijay Nagar",
         "addressLine2": "Near Central School",
-        "city": "Damoh",
-        "state": "Madhya Pradesh",
-        "zip": 470661
+        "city": "Bhopal",
+        "state": "state",
+        "zip": "475896"
       },
       "language": [
-        "English",
-        "Hindi"
+        "hindi",
+        "english"
       ],
-      "gender": "male",
-      "aboutYou": "I am a MEAN and MERN Stack developer",
-      "uploadPhoto": "shailendra.png",
-      "agreetc": true,
-      "role": "admin",
+      "mobNumber": "9826356964",
+      "name": "Shyam Jain",
+      "password": "123456",
+      "uploadPhoto": "C:\\fakepath\\images.jfif",
+      "role": "buyer",
       "id": "0894"
     },
     {
@@ -48,7 +49,8 @@
       "name": "Shailendra Jain",
       "password": "ABC@123",
       "uploadPhoto": "C:\\fakepath\\Certificate.jpg",
-      "role": "seller"
+      "role": "seller",
+      "agreetc": true
     },
     {
       "id": "7c18",
@@ -73,170 +75,249 @@
       "name": "Shaan Jain",
       "password": "ABCD@123",
       "uploadPhoto": "C:\\fakepath\\Certificate.jpg",
+      "agreetc": true,
       "role": "buyer"
+    },
+    {
+      "id": "ed35",
+      "aboutYou": "I am a passionate software developer. Specialize in frontend web technologies like Angular, React and backend technologies like NodeJS and ExpressJS",
+      "age": 29,
+      "dob": "1994-12-28",
+      "email": "jain_shailendra0894@gmail.com",
+      "gender": "male",
+      "address": {
+        "id": 0,
+        "addressLine1": "C-13, Vijay Nagar",
+        "addressLine2": "Balakot Road",
+        "city": "Damoh",
+        "state": "state",
+        "zip": "470661"
+      },
+      "language": [
+        "hindi",
+        "english"
+      ],
+      "mobNumber": "7415580898",
+      "name": "Shailendra Jain",
+      "password": "Sanmati0894@",
+      "uploadPhoto": "C:\\fakepath\\images.jfif",
+      "agreetc": true,
+      "role": "admin"
+    },
+    {
+      "id": "1a15",
+      "aboutYou": "Developer ",
+      "age": 26,
+      "dob": "1998-04-12",
+      "email": "vasu@email.com",
+      "gender": "male",
+      "address": {
+        "id": 0,
+        "addressLine1": "civil line",
+        "addressLine2": "aayodhya bypass",
+        "city": "Bhopal",
+        "state": "state",
+        "zip": "478695"
+      },
+      "language": [
+        "hindi",
+        "english"
+      ],
+      "mobNumber": "7896541230",
+      "name": "Vasu",
+      "password": "vasu1234@",
+      "uploadPhoto": "C:\\fakepath\\images.jfif",
+      "role": "buyer",
+      "agreetc": true
+    },
+    {
+      "id": "6617",
+      "aboutYou": "I am a passionate financial adviser",
+      "age": 32,
+      "agreetc": true,
+      "dob": "1992-02-28",
+      "email": "dharm.jain02@gmail.com",
+      "gender": "male",
+      "address": {
+        "id": 0,
+        "addressLine1": "Vijay Nagar",
+        "addressLine2": "Balakot Road",
+        "city": "Damoh",
+        "state": "state",
+        "zip": "470661"
+      },
+      "language": [
+        "hindi",
+        "english"
+      ],
+      "mobNumber": "7869400928",
+      "name": "Dharmendra Jain",
+      "password": "DHarm@123",
+      "uploadPhoto": "C:\\fakepath\\images.jfif",
+      "role": "seller"
     }
   ],
   "products": [
-      {
-        "id": 1,
-        "name": "Wireless Bluetooth Headphones",
-        "description": "High-quality over-ear headphones with Bluetooth connectivity for wireless listening experience.",
-        "price": 1599,
-        "category": "Electronics",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB1-PRXApHMT0xviLSU78LqRvdjFemt5Bl1w&usqp=CAU",
-        "stock": 50,
-        "status": "publish"
-      },
-      {
-        "id": 2,
-        "name": "Portable Power Bank",
-        "description": "Compact power bank with 10000mAh capacity, suitable for charging smartphones and other devices on the go.",
-        "price": 999,
-        "category": "Electronics",
-        "image": "https://m.media-amazon.com/images/I/51ihPoessmL.jpg",
-        "stock": 100,
-        "status": "publish"
-      },
-      {
-        "id": 3,
-        "name": "Men's Classic Chain Watch",
-        "description": "Elegant timepiece featuring a stainless steel case and and premium chain strap.",
-        "price": 2999,
-        "category": "Fashion",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqlmDpwhDoeA5kbEoa23hw9haWdqkiG1gkg&usqp=CAU",
-        "stock": 30,
-        "status": "publish"
-      },
-      {
-        "id": 4,
-        "name": "Women's Vintage Shoulder Bag",
-        "description": "Vintage-style shoulder bag crafted from high-quality faux leather material.",
-        "price": 1999,
-        "category": "Fashion",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQYx5yZP_O2KLaUTpXPsLio8fU88UbBryJQ&usqp=CAU",
-        "stock": 20,
-        "status": "draft"
-      },
-      {
-        "id": 5,
-        "name": "Smart LED Light Bulb",
-        "description": "Smart LED bulb compatible with voice assistants and smartphone apps for remote control and automation.",
-        "price": 799,
-        "category": "Home & Kitchen",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1i8pCgporS0l3jp5_xTk20Rod_fQHsAsA&usqp=CAU",
-        "stock": 750,
-        "status": "draft"
-      },
-      {
-        "id": 6,
-        "name": "Stainless Steel Water Bottle",
-        "description": "Durable and eco-friendly water bottle made from high-grade stainless steel, suitable for outdoor activities.",
-        "price": 899,
-        "category": "Home & Kitchen",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrnr9UecNfIBC-eKKGvh8AcNq7BmXkQGFqOw&usqp=CAU",
-        "stock": 50,
-        "status": "publish"
-      },
-      {
-        "id": 7,
-        "name": "Wireless Charging Pad",
-        "description": "Sleek and efficient wireless charging pad compatible with Qi-enabled devices.",
-        "price": 3499,
-        "category": "Electronics",
-        "image": "https://www.mytrendyphone.eu/images/Universal-Fast-Qi-Wireless-Charging-Pad-Q25-Black-05112021-01-p.webp",
-        "stock": 40,
-        "status": "publish"
-      },
-      {
-        "id": 8,
-        "name": "Fitness Tracker Smartwatch",
-        "description": "Multi-functional smartwatch with fitness tracking features, heart rate monitor, and notifications.",
-        "price": 6999,
-        "category": "Electronics",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYtH6LkzhWLMeDE7V-i6FcSma3wtW37JKhQ&usqp=CAU",
-        "stock": 25,
-        "status": "draft"
-      },
-      {
-        "id": 9,
-        "name": "Classic Wayfarer Sunglasses",
-        "description": "Iconic Wayfarer-style sunglasses with UV protection lenses, suitable for both men and women.",
-        "price": 2249,
-        "category": "Fashion",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPawfIAJ_PdJ-VlTaE8unb4Nb1cI1sXl5IQ&usqp=CAU",
-        "stock": 35,
-        "status": "publish"
-      },
-      {
-        "id": 10,
-        "name": "Women's Casual Sneakers",
-        "description": "Comfortable and stylish sneakers for everyday wear, available in various colors and sizes.",
-        "price": 1699,
-        "category": "Fashion",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTjepDwsYtTTuCBiTO5VLVvpqtAXeIGZo8XDCheVGemCHtJkBbl1_cDol_O-Gn1BeU3I&usqp=CAU",
-        "stock": 15,
-        "status": "draft"
-      },
-      {
-        "id": 11,
-        "name": "Smart Home Security Camera",
-        "description": "High-definition security camera with motion detection and two-way audio capabilities for home surveillance.",
-        "price": 2799,
-        "category": "Home & Kitchen",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9bwgLOaMN4sA1VvpZSam7SwbrVLnPrDVbQ&usqp=CAU",
-        "stock": 30,
-        "status": "inactive"
-      },
-      {
-        "id": 12,
-        "name": "Portable Espresso Maker",
-        "description": "Compact and portable espresso maker for brewing delicious coffee on the go.",
-        "price": 1199,
-        "category": "Home & Kitchen",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6yxFPP8k8qqPUB86Sv5NQdl4JOIolPdoL3g&usqp=CAU",
-        "stock": 20,
-        "status": "publish"
-      },
-      {
-        "id": 13,
-        "name": "Bluetooth Shower Speaker",
-        "description": "Waterproof Bluetooth speaker designed for use in the shower or outdoors, with built-in microphone for hands-free calling.",
-        "price": 2999,
-        "category": "Electronics",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOS9QeLklK2DUmYPiEDpGu1yMadwZ1dfKkfw&usqp=CAU",
-        "stock": 50,
-        "status": "publish"
-      },
-      {
-        "id": 14,
-        "name": "Men's Wallet",
-        "description": "Slim and durable leather wallet with multiple card slots and a cash compartment.",
-        "price": 499,
-        "category": "Fashion",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHoqDEDdnE-VqcPtj-djJU5Nrou8ReKXP8w&usqp=CAU",
-        "stock": 40,
-        "status": "draft"
-      },
-      {
-        "id": 15,
-        "name": "Set of Stainless Steel Cooking Utensils",
-        "description": "Complete set of essential cooking utensils made from high-quality stainless steel.",
-        "price": 8749,
-        "category": "Home & Kitchen",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf4wCPzrbF3fAZAnNRz-q0kri98kIm5r-u4Q&usqp=CAU",
-        "stock": 20,
-        "status": "publish"
-      },
-      {
-        "id": 16,
-        "name": "Faux Fur Throw Blanket",
-        "description": "Soft and cozy faux fur throw blanket for adding warmth and style to your living space.",
-        "price": 4999,
-        "category": "Home & Kitchen",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKAMlzOxo_C-LYCk1VWRG1bWKzyqlaj1aGgw&usqp=CAU",
-        "stock": 30,
-        "status": "publish"
-      }
+    {
+      "id": "1",
+      "name": "Wireless Bluetooth Headphones",
+      "description": "High-quality over-ear headphones with Bluetooth connectivity for wireless listening experience.",
+      "price": 1599,
+      "category": "Electronics",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB1-PRXApHMT0xviLSU78LqRvdjFemt5Bl1w&usqp=CAU",
+      "stock": 50,
+      "status": "publish"
+    },
+    {
+      "id": "2",
+      "name": "Portable Power Bank",
+      "description": "Compact power bank with 10000mAh capacity, suitable for charging smartphones and other devices on the go.",
+      "price": 999,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/51ihPoessmL.jpg",
+      "stock": 100,
+      "status": "publish"
+    },
+    {
+      "id": "3",
+      "name": "Men's Classic Chain Watch",
+      "description": "Elegant timepiece featuring a stainless steel case and and premium chain strap.",
+      "price": 2999,
+      "category": "Fashion",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoqlmDpwhDoeA5kbEoa23hw9haWdqkiG1gkg&usqp=CAU",
+      "stock": 30,
+      "status": "publish"
+    },
+    {
+      "id": "4",
+      "name": "Women's Vintage Shoulder Bag",
+      "description": "Vintage-style shoulder bag crafted from high-quality faux leather material.",
+      "price": 1999,
+      "category": "Fashion",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQYx5yZP_O2KLaUTpXPsLio8fU88UbBryJQ&usqp=CAU",
+      "stock": 20,
+      "status": "draft"
+    },
+    {
+      "id": "5",
+      "name": "Smart LED Light Bulb",
+      "description": "Smart LED bulb compatible with voice assistants and smartphone apps for remote control and automation.",
+      "price": 799,
+      "category": "Home & Kitchen",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1i8pCgporS0l3jp5_xTk20Rod_fQHsAsA&usqp=CAU",
+      "stock": 750,
+      "status": "draft"
+    },
+    {
+      "id": "6",
+      "name": "Stainless Steel Water Bottle",
+      "description": "Durable and eco-friendly water bottle made from high-grade stainless steel, suitable for outdoor activities.",
+      "price": 899,
+      "category": "Home & Kitchen",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrnr9UecNfIBC-eKKGvh8AcNq7BmXkQGFqOw&usqp=CAU",
+      "stock": 50,
+      "status": "publish"
+    },
+    {
+      "id": "7",
+      "name": "Wireless Charging Pad",
+      "description": "Sleek and efficient wireless charging pad compatible with Qi-enabled devices.",
+      "price": 3499,
+      "category": "Electronics",
+      "image": "https://www.mytrendyphone.eu/images/Universal-Fast-Qi-Wireless-Charging-Pad-Q25-Black-05112021-01-p.webp",
+      "stock": 40,
+      "status": "publish"
+    },
+    {
+      "id": "8",
+      "name": "Fitness Tracker Smartwatch",
+      "description": "Multi-functional smartwatch with fitness tracking features, heart rate monitor, and notifications.",
+      "price": 6999,
+      "category": "Electronics",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYtH6LkzhWLMeDE7V-i6FcSma3wtW37JKhQ&usqp=CAU",
+      "stock": 25,
+      "status": "draft"
+    },
+    {
+      "id": "9",
+      "name": "Classic Wayfarer Sunglasses",
+      "description": "Iconic Wayfarer-style sunglasses with UV protection lenses, suitable for both men and women.",
+      "price": 2249,
+      "category": "Fashion",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPawfIAJ_PdJ-VlTaE8unb4Nb1cI1sXl5IQ&usqp=CAU",
+      "stock": 35,
+      "status": "publish"
+    },
+    {
+      "id": "10",
+      "name": "Women's Casual Sneakers",
+      "description": "Comfortable and stylish sneakers for everyday wear, available in various colors and sizes.",
+      "price": 1699,
+      "category": "Fashion",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTjepDwsYtTTuCBiTO5VLVvpqtAXeIGZo8XDCheVGemCHtJkBbl1_cDol_O-Gn1BeU3I&usqp=CAU",
+      "stock": 15,
+      "status": "draft"
+    },
+    {
+      "id": "11",
+      "name": "Smart Home Security Camera",
+      "description": "High-definition security camera with motion detection and two-way audio capabilities for home surveillance.",
+      "price": 2799,
+      "category": "Home & Kitchen",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9bwgLOaMN4sA1VvpZSam7SwbrVLnPrDVbQ&usqp=CAU",
+      "stock": 30,
+      "status": "inactive"
+    },
+    {
+      "id": "12",
+      "name": "Portable Espresso Maker",
+      "description": "Compact and portable espresso maker for brewing delicious coffee on the go.",
+      "price": 1199,
+      "category": "Home & Kitchen",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6yxFPP8k8qqPUB86Sv5NQdl4JOIolPdoL3g&usqp=CAU",
+      "stock": 20,
+      "status": "publish"
+    },
+    {
+      "id": "13",
+      "name": "Bluetooth Shower Speaker",
+      "description": "Waterproof Bluetooth speaker designed for use in the shower or outdoors, with built-in microphone for hands-free calling.",
+      "price": 2999,
+      "category": "Electronics",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOS9QeLklK2DUmYPiEDpGu1yMadwZ1dfKkfw&usqp=CAU",
+      "stock": 50,
+      "status": "publish"
+    },
+    {
+      "id": "14",
+      "name": "Men's Wallet",
+      "description": "Slim and durable leather wallet with multiple card slots and a cash compartment.",
+      "price": 499,
+      "category": "Fashion",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHoqDEDdnE-VqcPtj-djJU5Nrou8ReKXP8w&usqp=CAU",
+      "stock": 40,
+      "status": "draft"
+    },
+    {
+      "id": "15",
+      "name": "Set of Stainless Steel Cooking Utensils",
+      "description": "Complete set of essential cooking utensils made from high-quality stainless steel.",
+      "price": 8749,
+      "category": "Home & Kitchen",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf4wCPzrbF3fAZAnNRz-q0kri98kIm5r-u4Q&usqp=CAU",
+      "stock": 20,
+      "status": "publish"
+    },
+    {
+      "id": "16",
+      "name": "Faux Fur Throw Blanket",
+      "description": "Soft and cozy faux fur throw blanket for adding warmth and style to your living space.",
+      "price": 4999,
+      "category": "Home & Kitchen",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKAMlzOxo_C-LYCk1VWRG1bWKzyqlaj1aGgw&usqp=CAU",
+      "stock": 30,
+      "status": "publish"
+    }
   ],
   "order": [
     {

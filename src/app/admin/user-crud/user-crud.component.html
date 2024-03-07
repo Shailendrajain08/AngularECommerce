@@ -3,7 +3,8 @@
     <strong>All User List </strong>
   </div>
   <div class="col-md-2">
-    <button class="btn btn-dark float-rigth" type="button" (click)="addUserPopup()" data-toggle="modal" data-target="#addEditUserModal">Add New User</button>
+    <button class="btn btn-dark float-rigth" type="button" (click)="addUserPopup()" data-bs-toggle="modal"
+      data-bs-target="#addEditUserModal">Add New User</button>
   </div>
 </div>
 
@@ -28,11 +29,142 @@
       <td>{{userData.email}}</td>
       <td>{{userData.dob}}</td>
       <td>{{userData.address.city}}</td>
-      <td>{{userData.role}}</td>
+      <td>{{userData.role | titlecase}}</td>
       <td>
-        <span class="sim-pointer" (click)="editUserPopup(userData.id)" data-toggle="modal" data-target="#addEditUserModal">Edit</span> &nbsp; &nbsp;
-        <span class="sim-pointer" (click)="deleteUser(userData.id)">Delete</span>
+        <span class="sim-pointer" (click)="editUserPopup(userData.id)" data-bs-toggle="modal"
+          data-bs-target="#addEditUserModal" style="color: blue;">Edit</span> &nbsp; &nbsp;
+        <span class="sim-pointer" (click)="deleteUser(userData.id)" style="color: red;">Delete</span>
       </td>
     </tr>
   </tbody>
 </table>
+
+<!-- Modal for Add user and Edit user -->
+
+<div class="modal fade" #closeModal id="addEditUserModal" width="50%" tabindex="11" role="dialog" aria-labelledby="addEditUserModal" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div  >
+            <form action="" class="container" [formGroup]="addEditUserForm">
+              <div class="card ">
+                <div class="card-header bs-success" style="background-color: #e3f2fd;">
+                  <h1>{{popupHeader}}</h1>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="form-group col-lg-12">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" formControlName="name" placeholder="Ex.. Ram Jain">
+                      </div>
+                      <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" class="form-control" formControlName="mobNumber" placeholder="Ex.. 78965*****">
+                      </div>
+                      <div class="form-group">
+                        <label for="age">Enter You Age</label>
+                        <input type="number" class="form-control" formControlName="age" placeholder="Ex.. 22">
+                      </div>
+                      <div class="form-group">
+                        <label for="dob">Enter You Date Of Birth</label>
+                        <input type="date" class="form-control" formControlName="dob">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" placeholder="Ex.. abc@email.com" formControlName="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Ex.. Abcd123@" formControlName="password">
+                      </div>
+                      <div class="form-group">
+                        <label for="address1">Address Line1</label>
+                        <input type="text" class="form-control" placeholder="Ex.. ground floor" formControlName="addressLine1">
+                      </div>
+                      <div class="form-group">
+                        <label for="address2">Address Line2</label>
+                        <input type="text" class="form-control" placeholder="Ex.. park street" formControlName="addressLine2">
+                      </div>
+                      <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="inputState" class="form-control" formControlName="state">
+                          <option selected>Select your State</option>
+                          <option *ngFor="let state of states" value="state">{{state}}</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" placeholder="Ex.. Bhopal" formControlName="city">
+                      </div>
+                      <div class="form-group">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" class="form-control" placeholder="Ex.. 470552" formControlName="zip">
+                      </div>
+                      <div class="form-group">
+                        <label for="language">Language <i style="font-size:12px; color: gray;">You can select multiple languages</i></label>
+                        <select multiple class="form-control" formControlName="language">
+                          <option selected>Select your Language</option>
+                          <option value="hindi">Hindi</option>
+                          <option value="english">English</option>
+                          <option value="gujarati">Gujarati</option>
+                          <option value="marathi">Marathi</option>
+                          <option value="telugu">Telugu</option>
+                          <option value="kannada">Kannada</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="form-check form-check-inline">
+                          <input type="radio" class="form-check-inline" name="gender" formControlName="gender" value="male">
+                          <label for="male" class="form-check-inline">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input type="radio" class="form-check-inline" name="gender" formControlName="gender" value="female">
+                          <label for="female" class="form-check-inline">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input type="radio" class="form-check-inline" name="gender" formControlName="gender" value="other">
+                          <label for="other" class="form-check-inline">Other</label>
+                        </div>
+                      </div>
+                      <div class="from-group">
+                        <label for="somethingAboutYou">Something About You</label>
+                        <textarea rows="3" class="form-control" formControlName="aboutYou"></textarea>
+                      </div>
+                      <div class="from-group">
+                        <label for="uploadYourPhoto">Upload Your Photo</label>
+                        <input type="file" class="form-control" formControlName="uploadPhoto">
+                      </div>
+                      <div class="form-group">
+                        <label for="role">What role do you want?</label>
+                        <select class="form-control" formControlName="role">
+                          <option selected>Select Your Role</option>
+                          <option value="admin">Admin</option>
+                          <option value="seller">Seller</option>
+                          <option value="buyer">Buyer</option>
+                        </select>
+                      </div>
+                      <div class="from-group">
+                        <input type="checkbox" class="form-check-inline" formControlName="agreetc">
+                        <label for="agreetc">Agree Terms and Condition</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer" style="background-color: #e3f2fd;">
+                  <div class="form-group">
+                    <button class="btn btn-primary" data-bs-dismiss="modal"  (click)="addUSER()" *ngIf="addUser">Register</button>
+                    <button class="btn btn-primary" data-bs-dismiss="modal"  (click)="updateUser()" *ngIf="editUser">Update User</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

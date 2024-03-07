@@ -1,19 +1,49 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../core/Model/objectModel';
 import { AdminService } from '../services/admin.service';
 
-declare var JQuery: any;
 @Component({
   selector: 'app-user-crud',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './user-crud.component.html',
   styleUrl: './user-crud.component.css'
 })
 export class UserCrudComponent implements OnInit {
+
+  states = [
+    'Andhra Pradesh',
+    'Arunachal Pradesh',
+    'Assam',
+    'Bihar',
+    'Chhattisgarh',
+    'Goa',
+    'Gujarat',
+    'Haryana',
+    'Himachal Pradesh',
+    'Jharkhand',
+    'Karnataka',
+    'Kerala',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Manipur',
+    'Meghalaya',
+    'Mizoram',
+    'Nagaland',
+    'Odisha',
+    'Punjab',
+    'Rajasthan',
+    'Sikkim',
+    'Tamil Nadu',
+    'Telangana',
+    'Tripura',
+    'Uttar Pradesh',
+    'Uttarakhand',
+    'West Bengal',
+  ];
   alluserData: any;
   singleUserData: any;
   addEditUserForm!: FormGroup;
@@ -72,7 +102,7 @@ export class UserCrudComponent implements OnInit {
     this.addEditUserForm.reset()
   }
 
-  addUSer() {
+  addUSER() {
     this.addEditUser = true;
     if (this.addEditUserForm.invalid) {
       alert('Error!! :-)\n\n' + JSON.stringify(this.addEditUserForm.value));
@@ -82,7 +112,7 @@ export class UserCrudComponent implements OnInit {
     this.userDataObj = {
       aboutYou: this.userRegData.aboutYou,
       age: this.userRegData.age,
-      agreetc: this.userRegData.ageertc,
+      agreetc: this.userRegData.agreetc,
       dob: this.userRegData.dob,
       email: this.userRegData.email,
       gender: this.userRegData.gender,
@@ -101,9 +131,11 @@ export class UserCrudComponent implements OnInit {
       uploadPhoto: this.userRegData.uploadPhoto,
       role: this.userRegData.role,
     }
+
+    console.log(this.userDataObj)
     this.adminService.addUser(this.userDataObj).subscribe(data => {
+      this.addEditUserForm.reset();
       this.getAllUser();
-      JQuery('#addEditUserModal').modal('toggle');
     }, error => {
       console.log("my wrong", error)
     })
@@ -126,11 +158,11 @@ export class UserCrudComponent implements OnInit {
         password: this.singleUserData.password,
         language: this.singleUserData.language,
         gender: this.singleUserData.gender,
-        addressLine1: this.singleUserData.addressLine1,
-        addressLine2: this.singleUserData.addressLine2,
-        city: this.singleUserData.city,
-        state: this.singleUserData.state,
-        zip: this.singleUserData.zip,
+        addressLine1: this.singleUserData.address.addressLine1,
+        addressLine2: this.singleUserData.address.addressLine2,
+        city: this.singleUserData.address.city,
+        state: this.singleUserData.address.state,
+        zip: this.singleUserData.address.zip,
         aboutYou: this.singleUserData.aboutYou,
         uploadPhoto: '',
         role: this.singleUserData.role,
@@ -150,7 +182,7 @@ export class UserCrudComponent implements OnInit {
     this.userDataObj = {
       aboutYou: this.userRegData.aboutYou,
       age: this.userRegData.age,
-      agreetc: this.userRegData.ageertc,
+      agreetc: this.userRegData.agreetc,
       dob: this.userRegData.dob,
       email: this.userRegData.email,
       gender: this.userRegData.gender,
@@ -166,21 +198,21 @@ export class UserCrudComponent implements OnInit {
       mobNumber: this.userRegData.mobNumber,
       name: this.userRegData.name,
       password: this.userRegData.password,
-      uploadPhoto: (this.userRegData.uploadPhoto == ""? this.uploadFileName :  this.userRegData.uploadPhoto),
+      uploadPhoto: (this.userRegData.uploadPhoto == "" ? this.uploadFileName : this.userRegData.uploadPhoto),
       role: this.userRegData.role,
     }
     this.adminService.editUser(this.editUserId, this.userDataObj).subscribe(data => {
+      this.addEditUserForm.reset();
       this.getAllUser();
-      JQuery('#addEditUserModal').modal('toggle');
     }, error => {
       console.log("my wrong", error)
     })
   }
 
-  deleteUser(user_id:any) {
+  deleteUser(user_id: any) {
     this.adminService.deleteUser(user_id).subscribe(data => {
       this.getAllUser()
-    },error => {
+    }, error => {
       console.log(error)
     })
   }

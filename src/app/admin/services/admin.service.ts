@@ -32,7 +32,7 @@ export class AdminService {
   // get data of individual user
 
   singleUser(user_id:any){
-    return this.api.get(this.user_url, user_id)
+    return this.api.get(this.user_url+user_id)
   }
 
   // update data of individual user
