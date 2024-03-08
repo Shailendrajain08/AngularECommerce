@@ -7,7 +7,7 @@
 
 <!-- user details and product details  -->
 <div class="row mb-2" style="margin-top: 5px;">
-  <div class="col-md-6" (click)="userDashBoard()">
+  <div class="col-md-5" (click)="userDashBoard()" style="margin-left:7.8%">
     <div class="row no-gutters border rounded overflow-hidden flex-md-row md-4 shadow sm h-md-250 possition-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 text-primary">Users</strong>
@@ -31,15 +31,16 @@
         <svg class="bd-placeholder-img" width="200" height="220" xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="placeholder:Thumbnail">
           <title>Manage User</title>
-          <rect width="100%" height="100%" fill="#55595c" /> <text x="30%" y="50%" fill="eceeef" dy=".3em">Total Users:
+          <rect width="100%" height="100%" fill="#55595c" /> <text x="25%" y="50%" fill="eceeef" dy=".3em">Total Users:
             {{total_user}}</text>
         </svg>
       </div>
     </div>
   </div>
-
+  &nbsp;
+  &nbsp;
   <!-- product -->
-  <div class="col-md-6" (click)="productDashboard()">
+  <div class="col-md-5" (click)="productDashboard()">
     <div class="row no-gutters border rounded overflow-hidden flex-md-row md-4 shadow sm h-md-250 possition-relative">
       <div class="col p-4 d-flex flex-column position-static">
         <strong class="d-inline-block mb-2 text-primary">Products</strong>
@@ -59,7 +60,7 @@
       <div class="col-auto d-none d-lg-block">
         <svg class="bd-placeholder-img" width="200" height="220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="placeholder:Thumbnail">
           <title>Manage Products</title>
-          <rect width="100%" height="100%" fill="#55595c"/> <text x="30%" y="50%" fill="eceeef" dy=".3em" >Total Products: {{total_product}}</text>
+          <rect width="100%" height="100%" fill="#55595c"/> <text x="25%" y="50%" fill="eceeef" dy=".3em" >Total Products: {{total_product}}</text>
         </svg>
       </div>
     </div>

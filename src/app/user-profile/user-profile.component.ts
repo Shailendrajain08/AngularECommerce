@@ -13,6 +13,37 @@ import { Router } from '@angular/router';
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent implements OnInit {
+
+  states = [
+    'Andhra Pradesh',
+    'Arunachal Pradesh',
+    'Assam',
+    'Bihar',
+    'Chhattisgarh',
+    'Goa',
+    'Gujarat',
+    'Haryana',
+    'Himachal Pradesh',
+    'Jharkhand',
+    'Karnataka',
+    'Kerala',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Manipur',
+    'Meghalaya',
+    'Mizoram',
+    'Nagaland',
+    'Odisha',
+    'Punjab',
+    'Rajasthan',
+    'Sikkim',
+    'Tamil Nadu',
+    'Telangana',
+    'Tripura',
+    'Uttar Pradesh',
+    'Uttarakhand',
+    'West Bengal',
+  ];
   userProfileForm!: FormGroup;
   userProfile: boolean = false;
   user_id!: any;
@@ -22,6 +53,7 @@ export class UserProfileComponent implements OnInit {
   user_profile_pic: any;
   user_language: any;
   user_role: any;
+  popupHeader = "User Profile"
 
   constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
 
@@ -42,9 +74,7 @@ export class UserProfileComponent implements OnInit {
       language: ['', Validators.required],
       gender: ['', Validators.required],
       aboutYou: ['', Validators.required],
-      uploadPhoto: ['', Validators.required],
-      agreetc: ['', Validators.required],
-      role: ['', Validators.required],
+      uploadPhoto: ['', Validators.required]
     })
     this.editUserData(this.user_id)
   }
@@ -75,8 +105,6 @@ export class UserProfileComponent implements OnInit {
         zip: this.user_data.address.zip,
         aboutYou: this.user_data.aboutYou,
         uploadPhoto: '',
-        role: this.user_data.role,
-        agreetc: this.user_data.agreetc
       })
     }, error => {
       console.log(error)
