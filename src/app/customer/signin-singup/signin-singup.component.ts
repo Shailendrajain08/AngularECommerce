@@ -135,8 +135,6 @@ export class SigninSingupComponent {
         uploadPhoto: this.user_reg_data.uploadPhoto,
         role: this.user_reg_data.role,
       };
-
-      console.log(this.user_dto);
       this.loginService.userRegister(this.user_dto).subscribe((data) => {
         alert('User Registered Successfull');
         this.router.navigateByUrl('/sign-in');
@@ -152,7 +150,6 @@ export class SigninSingupComponent {
       )
       .subscribe((data) => {
         this.user_data = data;
-        console.log(this.user_data.length)
         if (this.user_data.length == 1) {
           if (this.user_data[0].role == 'seller') {
             sessionStorage.setItem('user_session_id', this.user_data[0].id);
@@ -169,7 +166,6 @@ export class SigninSingupComponent {
         else{
           alert("Invalid login details");
         }
-        console.log(this.user_data)
       },
       error=>{
         console.log("My Error", error)

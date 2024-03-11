@@ -25,14 +25,16 @@ export class Address {
 }
 
 export class Product{
-  id!: number;
+  id!: string;
   name!: string;
   description!: string;
   price!: number;
+  dprice!: number;
   category!: string;
   image!: string;
   stock!: number;
   status!:boolean;
+
 }
 
 export class Order {

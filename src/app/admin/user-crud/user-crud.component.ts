@@ -87,7 +87,7 @@ export class UserCrudComponent implements OnInit {
     this.adminService.allUser().subscribe(data => {
       this.alluserData = data
     }, error => {
-      console.log()
+      console.log(error)
     })
   }
 
@@ -131,8 +131,6 @@ export class UserCrudComponent implements OnInit {
       uploadPhoto: this.userRegData.uploadPhoto,
       role: this.userRegData.role,
     }
-
-    console.log(this.userDataObj)
     this.adminService.addUser(this.userDataObj).subscribe(data => {
       this.addEditUserForm.reset();
       this.getAllUser();

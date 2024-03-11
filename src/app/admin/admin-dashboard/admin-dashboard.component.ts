@@ -41,7 +41,6 @@ export class AdminDashboardComponent implements OnInit {
   adminUserDashboardData() {
     this.adminService.userDashboardData().subscribe(data => {
       this.user_dashboard_data = data;
-      console.log("adminUserDashboardData",this.user_dashboard_data)
       for (let user in this.user_dashboard_data) {
         if (this.user_dashboard_data[user].role == 'admin') {
           ++this.admin_user;

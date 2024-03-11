@@ -32,9 +32,8 @@ export class AdminLoginComponent implements OnInit {
       }else{
         alert("Invalid Credientials")
       }
-      console.log(this.user_data)
     }, error => {
-      console.error(error);
+      console.log(error);
     });
   }
 }

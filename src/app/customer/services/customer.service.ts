@@ -9,9 +9,9 @@ export class CustomerService {
 
   private single_product_id = new BehaviorSubject(null);
   currentProduct = this.single_product_id.asObservable();
-  private user_url = 'http://localhost:3000/user'
-  private product_url = 'http://localhost:3000/products'
-  private order_url = 'http://localhost:3000/order'
+  private user_url = 'http://localhost:3000/user/'
+  private product_url = 'http://localhost:3000/products/'
+  private order_url = 'http://localhost:3000/order/'
 
   constructor( private apiService : ApiService) { }
 
